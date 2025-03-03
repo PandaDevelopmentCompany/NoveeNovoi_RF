@@ -480,6 +480,93 @@
 </section>
 
 
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Основной стиль кнопки */
+        .pulse-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff5722;
+            color: #fff;
+            font-size: 18px;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Анимация пульсации */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 10px rgba(255, 87, 34, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 87, 34, 0.8); }
+            100% { box-shadow: 0 0 10px rgba(255, 87, 34, 0.5); }
+        }
+
+        /* Контейнер ссылок */
+        .contact-links {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Ссылки */
+        .contact-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: #f2f2f2;
+        }
+
+        /* Иконки */
+        .contact-links a i {
+            font-size: 20px;
+            color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Кнопка "Связаться" -->
+    <button class="pulse-button" onclick="toggleContacts()">Связаться</button>
+
+    <!-- Всплывающий блок с контактами -->
+    <div class="contact-links" id="contactLinks">
+        <a href="https://vk.com/officevann" target="_blank"><i class="fab fa-vk"></i> ВКонтакте</a>
+        <a href="https://ok.ru/profile/568962643295" target="_blank"><i class="fab fa-odnoklassniki"></i> Одноклассники</a>
+        <a href="https://www.instagram.com/restavracia_vann66rus/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="tel:+79089142609"><i class="fas fa-phone"></i> +7 (908) 914-26-09</a>
+        <a href="mailto:info@noveenovoi.ru"><i class="fas fa-envelope"></i> info@noveenovoi.ru</a>
+    </div>
+
+    <script>
+        function toggleContacts() {
+            const links = document.getElementById('contactLinks');
+            links.style.display = (links.style.display === 'flex') ? 'none' : 'flex';
+        }
+    </script>
+
+
+
 
       <footer class="footer-classic bg-gray-8">
         <div class="container">
