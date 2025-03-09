@@ -1364,8 +1364,6 @@
 
 
 
-
-
 // popup
 let popupBg_restbath = document.querySelector('.popup__bg_restbath');
 let popup_restbath = document.querySelector('.popup_restbath');
@@ -1373,28 +1371,37 @@ let openPopupButtons_restbath = document.querySelectorAll('.open-popup_restbath'
 let closePopupButton_restbath = document.querySelector('.close-popup_restbath'); 
 let closePopupButtonSubmit_restbath = document.querySelector('.close_through_submit_restbath');
 
-openPopupButtons_restbath.forEach((button) => { // Перебираем все кнопки
-    button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
-        e.preventDefault(); // Предотвращаем дефолтное поведение браузера
-        popupBg_restbath.classList.add('active'); // Добавляем класс 'active' для фона
-        popup_restbath.classList.add('active'); // И для самого окна
-    })
+// Функция для блокировки прокрутки
+function lockScroll() {
+    document.body.classList.add('lock-scroll');
+}
+
+// Функция для разблокировки прокрутки
+function unlockScroll() {
+    document.body.classList.remove('lock-scroll');
+}
+
+openPopupButtons_restbath.forEach((button) => { 
+    button.addEventListener('click', (e) => { 
+        e.preventDefault(); 
+        popupBg_restbath.classList.add('active'); 
+        popup_restbath.classList.add('active'); 
+        lockScroll(); // Блокируем прокрутку при открытии попапа
+    });
 });
 
-closePopupButton_restbath.addEventListener('click',() => { // Вешаем обработчик на крестик
-    popupBg_restbath.classList.remove('active'); // Убираем активный класс с фона
-    popup_restbath.classList.remove('active'); // И с окна
-});
+function closePopup() {
+    popupBg_restbath.classList.remove('active'); 
+    popup_restbath.classList.remove('active'); 
+    unlockScroll(); // Разблокируем прокрутку при закрытии попапа
+}
 
-document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
-    if(e.target === popupBg_restbath) { // Если цель клика - фот, то:
-        popupBg_restbath.classList.remove('active'); // Убираем активный класс с фона
-        popup_restbath.classList.remove('active'); // И с окна
+closePopupButton_restbath.addEventListener('click', closePopup);
+
+document.addEventListener('click', (e) => { 
+    if (e.target === popupBg_restbath) { 
+        closePopup();
     }
 });
 
-closePopupButtonSubmit_restbath.addEventListener('click',() => { // Вешаем обработчик на submit
-    popupBg_restbath.classList.remove('active'); // Убираем активный класс с фона
-    popup_restbath.classList.remove('active'); // И с окна
-});
-
+closePopupButtonSubmit_restbath.addEventListener('click', closePopup);
