@@ -52,7 +52,7 @@
                 </div>
                 <!-- RD Navbar Nav-->
                 <div class="rd-navbar-nav-wrap">
-                  <div class="rd-navbar-main-item"><a class="button button-xs button-lighter" href="#">Оставить заявку</a></div>
+                  <div class="rd-navbar-main-item"><a class="open-popup_restbath button button-xs button-lighter" href="#">Оставить заявку</a></div>
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
                     <li class="active"><a href="index.html">Главная</a>
@@ -89,7 +89,7 @@
                             <h1 data-caption-animate="fadeInUpSmall">Ваша ванна как новая</h1>
                             <p class="big" style="max-width: 520px" data-caption-animate="fadeInRightSmall"
                                 data-caption-delay="300">Профессиональная реставрация ванн современными методами:
-                                эмалировка, наливной акрил и акриловые вкладыши.</p><a class="button button-primary"
+                                эмалировка, наливной акрил и акриловые вкладыши.</p><a class="open-popup_restbath button button-primary"
                                 href="#" data-caption-animate="fadeInRightSmall" data-caption-delay="550">Оставить
                                 заявку</a>
                         </div>
@@ -103,7 +103,7 @@
                             <h1 data-caption-animate="fadeInUpSmall">Долговечное покрытие</h1>
                             <p class="big" style="max-width: 520px" data-caption-animate="fadeInRightSmall"
                                 data-caption-delay="300">Наши технологии позволяют обновить ванну без демонтажа и
-                                ремонта, продлевая срок службы на 10 лет и более.</p><a class="button button-primary"
+                                ремонта, продлевая срок службы на 10 лет и более.</p><a class="open-popup_restbath button button-primary"
                                 href="#" data-caption-animate="fadeInRightSmall" data-caption-delay="550">Оставить
                                 заявку</a>
                         </div>
@@ -117,7 +117,7 @@
                             <h1 data-caption-animate="fadeInUpSmall">Гарантия качества</h1>
                             <p class="big" style="max-width: 520px" data-caption-animate="fadeInRightSmall"
                                 data-caption-delay="300">Мы используем только проверенные материалы и даем гарантию на
-                                все виды реставрации.</p><a class="button button-primary" href="#"
+                                все виды реставрации.</p><a class="open-popup_restbath button button-primary" href="#"
                                 data-caption-animate="fadeInRightSmall" data-caption-delay="550">Оставить
                                 заявку</a>
                         </div>
@@ -237,7 +237,7 @@
             <!-- Section Header-->
             <div class="section__header">
                 <h2>Наши услуги</h2>
-                <div class="section__header-element"><a class="link-cta" href="#">Связаться для консультации</a></div>
+                <div class="open-popup_restbath section__header-element"><a class="link-cta" href="#">Связаться для консультации</a></div>
             </div>
             <div class="isotope" data-isotope-layout="fitRows" data-isotope-group="products">
                 <div class="row row-offset-2">
@@ -248,7 +248,7 @@
                                 <p class="product__title"><a href="#">Наливной акрил</a></p>
                                 <p class="product__price">от 6 500 ₽</p>
                             </div>
-                            <div class="product__footer"><a class="button button-xs button-gray-2" href="#">Оставить заявку</a></div>
+                            <div class="product__footer"><a class="open-popup_restbath button button-xs button-gray-2" href="#">Оставить заявку</a></div>
                         </article>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3 isotope-item" data-filter="Category 1">
@@ -258,7 +258,7 @@
                                 <p class="product__title"><a href="#">Литьевой мрамор</a></p>
                                 <p class="product__price">от 7 500 ₽</p>
                             </div>
-                            <div class="product__footer"><a class="button button-xs button-gray-2" href="#">Оставить заявку</a></div>
+                            <div class="product__footer"><a class="open-popup_restbath button button-xs button-gray-2" href="#">Оставить заявку</a></div>
                         </article>
                     </div>
                 </div>
@@ -493,6 +493,48 @@ document.addEventListener('click', function(event) {
 
 
 
+
+
+
+<!-- Форма заявки на реставрацию ванн -->
+<div class="popup__bg_restbath"> 
+    <form class="popup_restbath">
+        <h4 class="form_heading">Оставить заявку на реставрацию ванны 🛁</h4>
+        <br>
+        <img src="images/close.svg" class="close-popup_restbath">
+        <label class="hidden_form_item">
+            <textarea id="messageInput_restbath" name="topic_message">Заявка на реставрацию ванны</textarea>
+            <div class="label__text"></div>
+        </label>
+        <label>
+            <input id="sendName_restbath" type="text" name="name">
+            <div class="label__text">
+                Ваше имя
+            </div>
+        </label>
+        <label>
+            <input id="sendTel_restbath" type="tel" name="phone" class="form-input">
+            <div class="label__text">
+                Ваш телефон
+            </div>
+        </label>
+        <div class="privacy_policy">
+            Нажимая на кнопку "Отправить", вы даёте согласие на обработку персональных данных и соглашаетесь с <a href="privacy.html" target="_blank"><u>политикой конфиденциальности</u></a>.
+        </div>
+        <button class="close_through_submit_restbath" id="sendButton_restbath" type="submit">Отправить</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
       <footer class="footer-classic bg-gray-8">
         <div class="container">
           <div class="footer-classic__main">
@@ -542,7 +584,32 @@ document.addEventListener('click', function(event) {
         once: true // Анимация срабатывает только один раз
     });
     </script>
+
+
+
+    <script src="js/jquery-371min.js"></script>
+    <script src="js/jquerymaskedinputmin.js"></script>
+    <script>
+      $("input[name='phone']").mask("+7(999) 999-9999");
+      
+      $(".bezvalue_wrap").html("<input class='bezvalue'  type='text' name='bezvalue' value='' />");  
+       $(".bezvalue").val("Dolly Duck");
+       $(".bezvalue").hide();
+       
+       
+       $('.datatitle').on('click',function(){
+      var mysuperdata = $(this).attr('data-title');
+      $('#titlezagalovor').html(mysuperdata);
+       
+      });
+      </script>
+
     
+
+
+    <!-- для работы формы в tg -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
