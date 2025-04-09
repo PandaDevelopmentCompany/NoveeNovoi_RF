@@ -431,3 +431,103 @@
 
 
 
+
+<!-- Секция с видеоотчетами -->
+<section id="video-reports" class="section section-md bg-default text-center">
+    <div class="container">
+        <h2>Видеоотчеты</h2>
+        <hr class="divider_hr">
+        <h4 style="margin-top: 10px;">Результаты нашей работы в видеоформате</h4>
+
+        <!-- Карусель видео -->
+        <div class="swiper video-swiper">
+            <div class="swiper-wrapper">
+                <!-- Видео 1 -->
+                <div class="swiper-slide">
+                    <div class="video-wrapper">
+                        <video controls poster="images/video-preview-1.jpg">
+                            <source src="https://pandadevelopmentcompany.github.io/NoveeNovoi_RF/media_assets/video1.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                </div>
+
+                 <div class="swiper-slide">
+                    <div class="video-wrapper">
+                        <video controls poster="images/video-preview-1.jpg">
+                            <source src="https://pandadevelopmentcompany.github.io/NoveeNovoi_RF/media_assets/video1.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
+                </div>
+                <!-- Дополни, если нужны другие видео -->
+            </div>
+
+            <!-- Кнопки управления -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Подключение Swiper.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Инициализация карусели -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.video-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    });
+</script>
+
+<!-- Стили -->
+<style>
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .swiper {
+        padding: 20px 0;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        color: #000; /* Сделал стрелки темными */
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #000;
+    }
+
+    .bg-default {
+        background: #f8f9fa; /* Светлый фон, как у блока с фото */
+        padding: 50px 0;
+    }
+</style>
+
+
+
