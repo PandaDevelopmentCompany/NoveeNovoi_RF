@@ -176,7 +176,7 @@
 
 
 
-<section id="photo" class="section section-md bg-default text-center">
+<!-- <section id="photo" class="section section-md bg-default text-center">
     <div class="container">
         <h2>Результат на фото</h2>
         <hr class="divider_hr">
@@ -202,7 +202,110 @@
             </div>
         </div>
     </div>
+</section> -->
+
+
+
+
+
+
+<section id="photo" class="section section-md bg-default text-center">
+  <div class="container">
+    <h2>Результат на фото</h2>
+    <hr class="divider_hr">
+    <h4 style="margin-top: 10px;">Фото реставрации ванн</h4>
+    <div class="row row-70 row-offset-1">
+
+      <!-- Карточка 1 -->
+      <div class="col-lg-4" data-aos="fade-up">
+        <div class="collection">
+          <div class="collection-img flip-container" data-flip-time="3000">
+            <div class="flipper">
+              <img class="front" src="images/product-01-470x303.jpg" alt="До" width="470" height="303" />
+              <img class="back" src="images/product-01-470x303.jpg" alt="После" width="470" height="303" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 2 -->
+      <div class="col-lg-4" data-aos="fade-down">
+        <div class="collection">
+          <div class="collection-img flip-container" data-flip-time="4500">
+            <div class="flipper">
+              <img class="front" src="images/product-02-470x303.jpg" alt="До" width="470" height="303" />
+              <img class="back" src="images/product-02-470x303.jpg" alt="После" width="470" height="303" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 3 -->
+      <div class="col-lg-4" data-aos="zoom-in">
+        <div class="collection">
+          <div class="collection-img flip-container" data-flip-time="6000">
+            <div class="flipper">
+              <img class="front" src="images/product-03-470x303.jpg" alt="До" width="470" height="303" />
+              <img class="back" src="images/product-03-470x303.jpg" alt="После" width="470" height="303" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 4 -->
+      <div class="col-lg-4" data-aos="flip-left">
+        <div class="collection">
+          <div class="collection-img flip-container" data-flip-time="5000">
+            <div class="flipper">
+              <img class="front" src="images/product-04-470x303.jpg" alt="До" width="470" height="303" />
+              <img class="back" src="images/product-04-470x303.jpg" alt="После" width="470" height="303" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 5 -->
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="collection">
+          <div class="collection-img flip-container" data-flip-time="7000">
+            <div class="flipper">
+              <img class="front" src="images/product-03-470x303.jpg" alt="До" width="470" height="303" />
+              <img class="back" src="images/product-03-470x303.jpg" alt="После" width="470" height="303" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 6 -->
+      <div class="col-lg-4" data-aos="fade-left">
+        <div class="collection">
+          <div class="collection-img flip-container" data-flip-time="4000">
+            <div class="flipper">
+              <img class="front" src="images/product-03-470x303.jpg" alt="До" width="470" height="303" />
+              <img class="back" src="images/product-03-470x303.jpg" alt="После" width="470" height="303" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
+
+
+
+
+<script>
+  document.querySelectorAll('.flip-container').forEach(container => {
+    const flipTime = parseInt(container.getAttribute('data-flip-time')) || 3000;
+    setInterval(() => {
+      container.classList.toggle('flipped');
+    }, flipTime);
+  });
+</script>
+
+
 
 
 
