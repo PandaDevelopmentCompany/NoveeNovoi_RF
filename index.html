@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
@@ -47,7 +52,7 @@
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand"><a class="brand" href="index.html">
-                      <div class="brand__name"><img src="images/logo_1.png" alt="" width="70" height=""/>
+                      <div class="brand__name img_logo_header_mobile"><img src="images/logo_1.png" alt="" width="70" height=""/>
                       </div></a></div>
                 </div>
                 <!-- RD Navbar Nav-->
@@ -83,7 +88,7 @@
         data-custom-next="#swiper-next" data-custom-slide-effect="interLeaveEffect">
         <div class="swiper-wrapper">
             <div class="swiper-slide bg-gray-dark">
-                <div class="slide-inner" style="background-image: url(images/slider-slide-1-1920x749.jpg);">
+                <div class="slide-inner" style="background-image: url(images/header_image_1.jpg);">
                     <div class="swiper-slide-caption">
                         <div class="container">
                             <h1 data-caption-animate="fadeInUpSmall">Ваша ванна как новая</h1>
@@ -97,7 +102,7 @@
                 </div>
             </div>
             <div class="swiper-slide bg-gray-dark">
-                <div class="slide-inner" style="background-image: url(images/slider-slide-2-1920x749.jpg);">
+                <div class="slide-inner" style="background-image: url(images/header_image_2.jpg);">
                     <div class="swiper-slide-caption">
                         <div class="container">
                             <h1 data-caption-animate="fadeInUpSmall">Долговечное покрытие</h1>
@@ -111,7 +116,7 @@
                 </div>
             </div>
             <div class="swiper-slide bg-gray-dark">
-                <div class="slide-inner" style="background-image: url(images/slider-slide-3-1920x749.jpg);">
+                <div class="slide-inner" style="background-image: url(images/header_image_3.jpg);">
                     <div class="swiper-slide-caption">
                         <div class="container">
                             <h1 data-caption-animate="fadeInUpSmall">Гарантия качества</h1>
@@ -604,6 +609,7 @@ document.addEventListener('click', function(event) {
 <!-- Форма заявки на реставрацию ванн -->
 <div class="popup__bg_restbath"> 
     <form class="popup_restbath">
+      <img class="logo_in_forms" src="images/logo_1.png">
         <h4 class="form_heading">Оставить заявку на реставрацию ванны 🛁</h4>
         <br>
         <img src="images/close.svg" class="close-popup_restbath">
